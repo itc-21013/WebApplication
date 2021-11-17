@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react
 import './App.css'
 
 const App = () => {
   const [checkedValues, setCheckedValues] = useState([])
-  const handleChange = e => {
+  const handleChange = (e) => {
     if (checkedValues.includes(e.target.value)) {
       setCheckedValues(
-        checkedValues.filter(checkedValue => checkedValue !== e.target.value)
+        checkedValues.filter((checkedValue) =>
+          checkedValue !== e.target.value)
       )
     } else {
       setCheckedValues([...checkedValues, e.target.value])
