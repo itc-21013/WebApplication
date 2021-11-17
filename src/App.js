@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className='App'>
       <p>
-        現在選択されている値 :<b>{checkedValues.join('、')}</b>
+        現在選択されている値:<b>{checkedValues.join('、')}</b>
       </p>
       <label>
         <input
