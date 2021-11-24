@@ -1,9 +1,22 @@
-// 関数コンポーネント内で state を扱えるようにするため、React を import 時に useState を読み込む
 import React, { useState } from 'react'
 import './styles.css'
 
+const values = [
+  { id: 1, item: 'HTML' },
+  { id: 2, item: 'CSS' },
+  { id: 3, item: 'JavaScript' }
+]
+
+const SelectItems = values.map(value => {
+  return (
+    <option value={value.item} key={value.id}>
+      {value.item}
+    </option>
+  )
+})
+
 const InputSelectBox = () => {
-  const [selectedValue, setSelectedValue] = useState('HTML')
+  const [selectedValue, setSelectedValue] = useState(values[0]['item'])
 
   const handleChange = e => {
     setSelectedValue(e.target.value)
@@ -17,9 +30,7 @@ const InputSelectBox = () => {
       </p>
 
       <select value={selectedValue} onChange={handleChange}>
-        <option value='HTML'>HTML</option>
-        <option value='CSS'>CSS</option>
-        <option value='JavaScript'>JavaScript</option>
+        {SelectItems}
       </select>
     </div>
   )
