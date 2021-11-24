@@ -1,6 +1,6 @@
 // 関数コンポーネント内で state を扱えるようにするため、React を import 時に useState を読み込む
 import React, { useState } from 'react'
-import './styles.css'
+import './App.css'
 
 const InputSelectBox = () => {
   const [selectedValue, setSelectedValue] = useState('HTML')
@@ -25,6 +25,4 @@ const InputSelectBox = () => {
   )
 }
 
-export default function App () {
-  return <InputSelectBox />
-}
+export default App
