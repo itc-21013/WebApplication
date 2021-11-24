@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './styles.css'
+import './App.css'
 
 const values = [
   { id: 1, item: 'HTML' },
@@ -36,6 +36,4 @@ const InputSelectBox = () => {
   )
 }
 
-export default function App () {
-  return <InputSelectBox />
-}
+export default App
